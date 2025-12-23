@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Assessment Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen active">
+        <div class="container">
+            <div class="game-logo">
+                <div class="logo-icon">₿</div>
+                <h1>FINANCE ASSESSMENT GAME</h1>
+            </div>
+            <p class="tagline">Test your skills across 4 critical dimensions</p>
+            
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">🧠</div>
+                    <h3>Cognitive</h3>
+                    <p>Pattern recognition & problem solving</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🔢</div>
+                    <h3>Numerical</h3>
+                    <p>Financial calculations & data analysis</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">🎯</div>
+                    <h3>Logic</h3>
+                    <p>Deductive reasoning & critical thinking</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">💼</div>
+                    <h3>Situational</h3>
+                    <p>Professional judgment & decision-making</p>
+                </div>
+            </div>
+
+            <button class="primary-button" id="start-game-btn">START ASSESSMENT</button>
+        </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen">
+        <div class="game-header">
+            <div class="header-left">
+                <div class="category-badge" id="current-category"></div>
+                <div class="question-counter">
+                    Question <span id="current-question">1</span> of <span id="total-questions">20</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="timer" id="timer">
+                    <span class="timer-icon">⏱</span>
+                    <span id="time-remaining">60</span>s
+                </div>
+                <div class="score-display">
+                    Score: <span id="current-score">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="game-content">
+            <div class="question-card">
+                <h2 id="question-text"></h2>
+                <div id="question-context" class="question-context"></div>
+                <div id="options-container" class="options-container"></div>
+                <button class="primary-button" id="submit-answer-btn">SUBMIT ANSWER</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" class="screen">
+        <div class="container">
+            <div class="results-header">
+                <h1>ASSESSMENT COMPLETE</h1>
+                <div class="final-score">
+                    <div class="score-number" id="final-score">0</div>
+                    <div class="score-label">Total Score</div>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>🧠 Cognitive</h3>
+                    <div class="result-bar">
+                        <div class="result-fill" id="cognitive-result"></div>
+                    </div>
+                    <p class="result-percentage" id="cognitive-percentage">0%</p>
+                </div>
+                <div class="result-card">
+                    <h3>🔢 Numerical</h3>
+                    <div class="result-bar">
+                        <div class="result-fill" id="numerical-result"></div>
+                    </div>
+                    <p class="result-percentage" id="numerical-percentage">0%</p>
+                </div>
+                <div class="result-card">
+                    <h3>🎯 Logic</h3>
+                    <div class="result-bar">
+                        <div class="result-fill" id="logic-result"></div>
+                    </div>
+                    <p class="result-percentage" id="logic-percentage">0%</p>
+                </div>
+                <div class="result-card">
+                    <h3>💼 Situational</h3>
+                    <div class="result-bar">
+                        <div class="result-fill" id="situational-result"></div>
+                    </div>
+                    <p class="result-percentage" id="situational-percentage">0%</p>
+                </div>
+            </div>
+
+            <div class="feedback-section">
+                <h3>Your Performance Summary</h3>
+                <p id="performance-feedback"></p>
+            </div>
+
+            <button class="primary-button" id="restart-btn">TRY AGAIN</button>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
