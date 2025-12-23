@@ -208,9 +208,9 @@ class FinanceAssessmentGame {
         let feedback = '';
         
         if (percentage >= 90) {
-            feedback = "🌟 Outstanding! You've demonstrated exceptional skills across all areas. You're well-prepared for top-tier finance roles.";
+            feedback = "🌟 Outstanding! You've demonstrated exceptional skills across all areas.";
         } else if (percentage >= 75) {
-            feedback = "💪 Excellent work! You have strong capabilities with minor areas for improvement. You're ready for most finance positions.";
+            feedback = "💪 Excellent work! You have strong capabilities with minor areas for improvement.";
         } else if (percentage >= 60) {
             feedback = "👍 Good effort! You show solid foundational skills. Focus on strengthening weaker areas to become more competitive.";
         } else {
